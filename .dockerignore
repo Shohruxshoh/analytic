@@ -1,0 +1,14 @@
+.git
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+.env
+.env.*
+*.log
+
+tests
+docs
+.idea
+.vscode
