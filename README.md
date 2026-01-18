@@ -287,6 +287,70 @@ ORDER BY (rule_id, window_start, event_type);
 
 ---
 
+# Live Deployment (Production URLs)
+
+This system is fully deployed and running in production.
+All APIs and real-time analytics endpoints are publicly accessible.
+
+## Live API Documentation 
+Ingestion API (Event Collection)
+
+ Base URL
+```commandline
+http://api.n-shohrux.uz
+http://api.n-shohrux.uz/docs
+```
+Used for:
+
+High-throughput event ingestion
+
+Kafka-based asynchronous publishing
+
+Fire-and-forget request handling
+
+Used for:
+
+High-throughput event ingestion
+
+Kafka-based asynchronous publishing
+
+Fire-and-forget request handling
+
+ Base URL
+```commandline
+http://analytics.n-shohrux.uz
+http://analytics.n-shohrux.uz/docs
+
+```
+Used for:
+
+Aggregated analytics queries (/stats)
+
+WebSocket real-time streams (/live-stats)
+
+ClickHouse-backed analytical workloads
+
+# Live System Verification
+
+You can verify the production system without local setup:
+
+Open Swagger UI:
+```
+https://api.n-shohrux.uz/docs
+
+https://analytics.n-shohrux.uz/docs
+```
+
+Ingest sample events using /ingest
+
+Create aggregation rules using /aggregation-rule
+
+Query analytics via /stats
+
+Subscribe to real-time updates via WebSocket /live-stats
+
+All responses are served from live Kafka, MongoDB, and ClickHouse instances.
+
 # 🏁 Final Notes
 
 This project demonstrates:
