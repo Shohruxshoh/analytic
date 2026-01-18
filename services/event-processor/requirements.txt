@@ -1,0 +1,6 @@
+aiokafka==0.10.0
+motor==3.3.2
+pymongo==4.5.0
+clickhouse-connect==0.10.0
+pydantic-settings==2.2.1
+lz4==4.4.5
