@@ -108,8 +108,8 @@ services:
       kafka-1: { condition: service_started }
       kafka-2: { condition: service_started }
       kafka-3: { condition: service_started }
-    expose:
-      - "${INGESTION_PORT}"
+    ports:
+      - "8000:8000"
 
   clickhouse:
     image: clickhouse/clickhouse-server:23.8
@@ -167,8 +167,8 @@ services:
     networks: [kafka-net]
     env_file:
       - .env
-    expose:
-      - "${ANALYTICS_PORT}"
+    ports:
+      - "8001:8001"
     depends_on:
       clickhouse: { condition: service_healthy }
       mongo: { condition: service_healthy }
